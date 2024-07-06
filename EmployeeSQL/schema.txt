@@ -1,5 +1,4 @@
-
-https://app.quickdatabasediagrams.com/#/s
+#       https://app.quickdatabasediagrams.com/#/s
 
 salaries as s
 -
@@ -8,34 +7,34 @@ salary int
 
 dept_emp 
 -
-emp_no PK integer FK >-< e.emp_no
-dept_no PK varchar FK >- d.dept_no
+emp_no PK INTEGER FK >-< e.emp_no
+dept_no PK VARCHAR(64) FK >- d.dept_no
 #neither are unique
 
 
 dept_manager
 -
-dept_no varchar FK >- d.dept_no
-emp_no PK integer FK - e.emp_no
+dept_no VARCHAR(64) FK >- d.dept_no
+emp_no PK INTEGER FK - e.emp_no
 
 departments as d
 -
-dept_no PK varchar
-dept_name varchar 
+dept_no PK VARCHAR(64)
+dept_name VARCHAR(64) 
 
 
 titles as t
 -
-title_id PK varchar
-title varchar 
+title_id PK VARCHAR(64)
+title VARCHAR(64) 
 
 employees as e 
 - 
-emp_no PK integer FK - s.emp_no
-emp_title_id varchar FK >- t.title_id
-birth_date varchar
-first_name varchar
-last_name varchar
-sex varchar
-hire_date varchar
+emp_no PK INTEGER FK - s.emp_no
+emp_title_id VARCHAR(64) FK >- t.title_id
+birth_date DATE
+first_name VARCHAR(64)
+last_name VARCHAR(64)
+sex VARCHAR(64)
+hire_date DATE
 
